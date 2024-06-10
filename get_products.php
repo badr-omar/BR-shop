@@ -1,0 +1,7 @@
+<?php
+include("connection.php");
+
+$stmt = $conn->prepare("SELECT * FROM products LIMIT 8");
+$stmt->execute();
+$feaatured_products = $stmt->get_result();
+?>
